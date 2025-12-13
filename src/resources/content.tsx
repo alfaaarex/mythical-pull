@@ -1,5 +1,5 @@
-import { About, Blog, Home, Person, Social, Work } from "@/types";
-import { Line, Row, Text } from "@once-ui-system/core";
+import { About, Blog, Gallery, Home, Person, Social, Work } from "@/types";
+import { Line, Row, Text, Newsletter } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Agnihotra",
