@@ -1,5 +1,5 @@
 import { About, Blog, Gallery, Home, Person, Social, Work } from "@/types";
-import { Line, Row, Text, Newsletter } from "@once-ui-system/core";
+import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Agnihotra",
@@ -12,11 +12,11 @@ const person: Person = {
   languages: ["English", "Bengali"], // optional: Leave the array empty if you don't want to display languages
 };
 
-const newsletter: Newsletter = {
-  display: false,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
-};
+//const newsletter: Newsletter = {
+//  display: false,
+//  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+//  description: <>My weekly newsletter about creativity and engineering</>,
+//};
 
 const social: Social = [
   // Links are automatically displayed.
