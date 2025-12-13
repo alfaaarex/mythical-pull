@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Nath",
   name: `Agnihotra Nath`,
   role: "UI/UX Designer & Developer",
-  avatar: "/images/avatar.png",
+  avatar: "/images/avatar.PNG",
   email: "agnihotranath@gmail.com",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bengali"], // optional: Leave the array empty if you don't want to display languages
