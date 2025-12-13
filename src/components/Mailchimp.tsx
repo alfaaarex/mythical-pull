@@ -106,10 +106,10 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
       />
       <Column maxWidth="xs" horizontal="center">
         <Heading marginBottom="s" variant="display-strong-xs">
-          {mailchimp.title}
+          
         </Heading>
         <Text wrap="balance" marginBottom="l" variant="body-default-l" onBackground="neutral-weak">
-          {mailchimp.description}
+          
         </Text>
       </Column>
       <form
