@@ -2,11 +2,12 @@
 
 import { Media, MasonryGrid } from "@once-ui-system/core";
 import { gallery } from "@/resources";
+import { Key } from "react";
 
 export default function GalleryView() {
   return (
     <MasonryGrid columns={2} s={{ columns: 1 }}>
-      {gallery.images.map((image, index) => (
+      {gallery.images.map((image: { orientation: string; src: string; alt: string | undefined; }, index: Key | null | undefined) => (
         <Media
           enlarge
           priority={index < 10}
