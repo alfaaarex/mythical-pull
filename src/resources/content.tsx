@@ -58,8 +58,8 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  title: `${person.name}`,
+  description: `${person.role} based in Kolkata, India.`,
   headline: <>Hi, I'm Agnihotra!</>,
   featured: {
     display: true,
@@ -68,7 +68,7 @@ const home: Home = {
         <strong className="ml-4">The Carcino Foundation</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Fight Cancer!
         </Text>
       </Row>
     ),
@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I build things that are cool. I also design for myself and Google Inc.
+    I build things that are cool. I also design for myself and  do things at Google.
 </>
   ),
 };
@@ -114,7 +114,7 @@ const about: About = {
     experiences: [
       {
         company: "The Carcino Foundation",
-        timeframe: "Feb 2025-Present",
+        timeframe: "Feb 2025 - Present",
         role: "Chief Operating Officer",
         achievements: [
           <>
@@ -185,18 +185,7 @@ const about: About = {
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          
         ],
       },
       {
@@ -220,12 +209,7 @@ const about: About = {
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          
         ],
       },
     ],
@@ -233,9 +217,9 @@ const about: About = {
 };
 
 const blog: Blog = {
-  path: "https://alfaaarex.github.io/picker.html",
-  label: "HueKit",
-  title: "A Colour Picker that Actually Works",
+  path: "/blog",
+  label: "Posts",
+  title: "I don't know what to put here.",
   description: `Discover what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
