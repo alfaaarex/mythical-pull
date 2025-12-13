@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    Hi, I'm Agnihotra. I build things that are cool. I also design for myself and Google Inc.
+    I build things that are cool. I also design for myself and Google Inc.
 </>
   ),
 };
