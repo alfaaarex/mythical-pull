@@ -88,7 +88,7 @@ const about: About = {
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
-    subItems: false,
+    subItems: true,
   },
   avatar: {
     display: true,
@@ -219,7 +219,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Posts",
-  title: "I don't know what to put here.",
+  title: "I also happen to write stuff.",
   description: `Discover what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -227,8 +227,8 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
+  label: "Projects",
+  title: `My Projects`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
@@ -236,7 +236,7 @@ const work: Work = {
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "MyBubble",
+  label: "Photos",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
   // Images by https://lorant.one
