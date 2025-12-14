@@ -14,7 +14,7 @@ import {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+const baseURL: string = "https://alfarexboi.vercel.app";
 
 const routes: RoutesConfig = {
   "/": true,
@@ -37,28 +37,28 @@ const protectedRoutes: ProtectedRoutesConfig = {
 };
 
 // Import and set font for each variant
-import { Geist } from "next/font/google";
+import { DM_Sans, Geist } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 
-const heading = Geist({
+const heading = DM_Sans({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
 });
 
-const body = Geist({
+const body = DM_Sans({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const label = Geist({
+const label = DM_Sans({
   variable: "--font-label",
   subsets: ["latin"],
   display: "swap",
 });
 
-const code = Geist_Mono({
+const code = DM_Sans({
   variable: "--font-code",
   subsets: ["latin"],
   display: "swap",
@@ -72,18 +72,17 @@ const fonts: FontsConfig = {
 };
 
 // default customization applied to the HTML in the main layout.tsx
-const style: StyleConfig = {
-  theme: "system", // dark | light | system
-  neutral: "gray", // sand | gray | slate | custom
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  solid: "contrast", // color | contrast
-  solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
-  surface: "translucent", // filled | translucent
-  transition: "all", // all | micro | macro
-  scaling: "100", // 90 | 95 | 100 | 105 | 110
-};
+const style = {
+  theme: "light",
+  brand: "yellow",
+  accent: "yellow",
+  neutral: "sand",
+  border: "rounded",
+  solid: "color",
+  solidStyle: "flat",
+  surface: "translucent",
+  transition: "all",
+} as StyleConfig;
 
 const dataStyle: DataStyleConfig = {
   variant: "gradient", // flat | gradient | outline
@@ -101,7 +100,7 @@ const dataStyle: DataStyleConfig = {
 
 const effects: EffectsConfig = {
   mask: {
-    cursor: false,
+    cursor: true,
     x: 50,
     y: 0,
     radius: 100,
@@ -114,18 +113,18 @@ const effects: EffectsConfig = {
     width: 100,
     height: 50,
     tilt: 0,
-    colorStart: "accent-background-strong",
+    colorStart: "accent-background",
     colorEnd: "page-background",
   },
   dots: {
     display: true,
     opacity: 40,
     size: "2",
-    color: "brand-background-strong",
+    color: "brand-background",
   },
   grid: {
     display: false,
-    opacity: 100,
+    opacity: 60,
     color: "neutral-alpha-medium",
     width: "0.25rem",
     height: "0.25rem",
@@ -187,16 +186,16 @@ const mailchimp: MailchimpConfig = {
 // default schema data
 const schema: SchemaConfig = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
+  type: "Portfolio",
+  name: "Agnihotra Nath",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "agnihotranath@gmail.com",
 };
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
+  threads: "https://www.threads.com/@alf4rex",
+  linkedin: "https://www.linkedin.com/alfarex",
   discord: "https://discord.com/invite/5EyAQ4eNdS",
 };
 

@@ -1,3 +1,4 @@
+// biome-ignore lint/style/useImportType: <explanation>
 import { About, Blog, Gallery, Home, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
@@ -84,7 +85,7 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
+  title: `More About Me`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
