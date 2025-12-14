@@ -7,10 +7,10 @@ const person: Person = {
   lastName: "Nath",
   name: `Agnihotra Nath`,
   role: "UI/UX Designer & Developer",
-  avatar: "/images/avatar.PNG",
+  avatar: "/images/avatar-01.jpg",
   email: "agnihotranath@gmail.com",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bengali"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Bengali", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
 //const newsletter: Newsletter = {
@@ -39,7 +39,7 @@ const social: Social = [
     name: "Instagram",
     icon: "instagram",
     link: "https://www.instagram.com/alf4rex/",
-    essential: false,
+    essential: true,
   },
   {
     name: "Threads",
@@ -61,7 +61,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}`,
   description: `${person.role} based in Kolkata, India.`,
-  headline: <>Hi, I'm Agnihotra!</>,
+  headline: <>Hi! I'm Agnihotra.</>,
   featured: {
     display: true,
     title: (
