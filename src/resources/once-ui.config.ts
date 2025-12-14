@@ -19,9 +19,9 @@ const baseURL: string = "https://alfarexboi.vercel.app";
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
-  "/work": true,
-  "/blog": true,
-  "/gallery": true,
+  "/work": false,
+  "/blog": false,
+  "/gallery": false,
 };
 
 const display: DisplayConfig = {
@@ -37,28 +37,27 @@ const protectedRoutes: ProtectedRoutesConfig = {
 };
 
 // Import and set font for each variant
-import { DM_Sans, Geist } from "next/font/google";
-import { Geist_Mono } from "next/font/google";
+import { DM_Sans, JetBrains_Mono, Geist } from "next/font/google";
 
-const heading = DM_Sans({
+const heading = Geist({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
 });
 
-const body = DM_Sans({
+const body = Geist({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const label = DM_Sans({
+const label = Geist({
   variable: "--font-label",
   subsets: ["latin"],
   display: "swap",
 });
 
-const code = DM_Sans({
+const code = Geist({
   variable: "--font-code",
   subsets: ["latin"],
   display: "swap",
@@ -74,8 +73,8 @@ const fonts: FontsConfig = {
 // default customization applied to the HTML in the main layout.tsx
 const style = {
   theme: "light",
-  brand: "yellow",
-  accent: "yellow",
+  brand: "indigo",
+  accent: "indigo",
   neutral: "sand",
   border: "rounded",
   solid: "color",
@@ -85,7 +84,7 @@ const style = {
 } as StyleConfig;
 
 const dataStyle: DataStyleConfig = {
-  variant: "gradient", // flat | gradient | outline
+  variant: "outline", // flat | gradient | outline
   mode: "categorical", // categorical | divergent | sequential
   height: 24, // default chart height
   axis: {
