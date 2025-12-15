@@ -1,7 +1,10 @@
 // biome-ignore lint/style/useImportType: <explanation>
 import { About, Blog, Gallery, Home, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
-
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import { HyperText } from "@/components/ui/hyper-text"
+import { MorphingText } from "@/components/ui/morphing-text";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 const person: Person = {
   firstName: "Agnihotra",
   lastName: "Nath",
@@ -12,13 +15,21 @@ const person: Person = {
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bengali", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
+<SmoothCursor />
+import { motion } from "motion/react"
 
 //const newsletter: Newsletter = {
 //  display: false,
 //  title: <>Subscribe to {person.firstName}'s Newsletter</>,
 //  description: <>My weekly newsletter about creativity and engineering</>,
 //};
-
+const texts = [
+  "Hello!",
+  "I'm Agnihotra.",
+  "I'm a UI/UX Designer.",
+  "I'm a Developer.",
+  "I'm a Researcher.",
+]
 const social: Social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
@@ -61,7 +72,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}`,
   description: `${person.role} based in Kolkata, India.`,
-  headline: <>Hi! I'm Agnihotra.</>,
+  headline: <TypingAnimation words={texts} loop />,
   featured: {
     display: true,
     title: (
@@ -77,7 +88,10 @@ const home: Home = {
   },
   subline: (
     <>
-    I build things that are cool. I also design for myself and  do things at Google.
+    I build things that are cool and useful. <br></br>
+    I'm the COO at The Carcino Foundation,
+    <br></br>and the Head of Student Developers at Google India.
+    
 </>
   ),
 };
@@ -142,9 +156,29 @@ const about: About = {
             Intially Moderating Designer for Pixel Studio.
             Contributing Designer for Material 3 Expressive
           </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Google DeepMind",
+        timeframe: "Nov 2023 - June 2024",
+        role: "Student Developer",
+        achievements: [
           <>
             Headed the Student Team responsible for Google Bard / Gemini. 
             Notable contributions to NotebookLM.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Microsoft",
+        timeframe: "Jan 2021 - Apr 2023",
+        role: "Student Systems Developer",
+        achievements: [
+          <>
+            Contributed to Base System Imaging (BSI) of Windows 11,
+            with additional contributions to FluentCode and Windows Server 2006.
           </>,
         ],
         images: [],
@@ -161,11 +195,11 @@ const about: About = {
       },
       {
         name: "Delhi Public School, Ruby Park",
-        description: <>Studied Science with CS for Grades XI-XII.</>,
+        description: <>Studied Higher Secondary Science with CS for XI-XII (AISSCE 2026).</>,
       },
       {
         name: "Don Bosco School, Park Circus",
-        description: <>Completed my schooling from here.</>,
+        description: <>Completed Secondary Education (ICSE 2024).</>,
       }
     ],
   },
