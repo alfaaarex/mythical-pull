@@ -104,7 +104,7 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
-      <Heading wrap="balance" variant="h2">My Recent Work </Heading>
+      <Heading wrap="balance" variant="display-strong-s">My Recent Work </Heading>
       <RevealFx translateY="16" delay={0.6}>
        <Projects range={[1,1]} />
       </RevealFx>
