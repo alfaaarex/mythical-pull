@@ -19,8 +19,8 @@ const baseURL: string = "https://alfarexboi.vercel.app";
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
-  "/work": true,
-  "/blog": false,
+  "/work": false,
+  "/blog": true,
   "/gallery": false,
 };
 
@@ -122,14 +122,14 @@ const effects: EffectsConfig = {
     color: "brand-background",
   },
   grid: {
-    display: true,
+    display: false,
     opacity: 60,
     color: "neutral-alpha-medium",
     width: "0.25rem",
     height: "0.25rem",
   },
   lines: {
-    display: false,
+    display: true,
     opacity: 100,
     color: "neutral-alpha-weak",
     size: "16",

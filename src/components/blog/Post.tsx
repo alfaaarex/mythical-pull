@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, Column, Media, Row, Avatar, Text } from "@once-ui-system/core";
+import { Card, Column, Media, Row, Carousel, Avatar, Text } from "@once-ui-system/core";
 import { formatDate } from "@/utils/formatDate";
 import { person } from "@/resources";
 
@@ -8,6 +8,7 @@ interface PostProps {
   post: any;
   thumbnail: boolean;
   direction?: "row" | "column";
+  images: string[];
 }
 
 export default function Post({ post, thumbnail, direction }: PostProps) {
@@ -18,7 +19,7 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
       href={`/blog/${post.slug}`}
       transition="micro-medium"
       direction={direction}
-      border="transparent"
+      border="neutral-alpha-weak"
       background="transparent"
       padding="4"
       radius="l-4"
@@ -32,20 +33,20 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
           border="neutral-alpha-weak"
           cursor="interactive"
           radius="l"
-          src={post.metadata.image}
+          src={post.metadata.images}
           alt={"Thumbnail of " + post.metadata.title}
           aspectRatio="16 / 9"
         />
       )}
       <Row fillWidth>
-        <Column maxWidth={28} paddingY="24" paddingX="l" gap="20" vertical="center">
+        <Column maxWidth={38} paddingY="24" paddingX="l" gap="20" vertical="center">
           <Row gap="24" vertical="center">
             <Row vertical="center" gap="16">
-              <Avatar src={person.avatar} size="s" />
-              <Text variant="label-default-s">{person.name}</Text>
+              <Avatar src={person.avatar} size="m" />
+              <Text variant="label-default-m">{person.name}</Text>
             </Row>
             <Text variant="body-default-xs" onBackground="neutral-weak">
-              {formatDate(post.metadata.publishedAt, false)}
+              {formatDate(post.metadata.publishedAt, true)}
             </Text>
           </Row>
           <Text variant="heading-strong-l" wrap="balance">
@@ -57,6 +58,14 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
             </Text>
           )}
         </Column>
+        <Carousel
+            sizes="(max-width: 860px) 90vw, 860px"
+            items={post.metadata.images.map((images: any) => ({
+          slide: images,
+          alt: post.metadata.title,
+          }))}
+          padding="20"
+          />
       </Row>
     </Card>
   );

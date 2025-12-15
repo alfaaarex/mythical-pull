@@ -13,7 +13,7 @@ interface PostsProps {
 export function Posts({
   range,
   columns = "1",
-  thumbnail = false,
+  thumbnail = true,
   exclude = [],
   direction,
 }: PostsProps) {

@@ -3,11 +3,13 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
+import { Avatar, Fade, User, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
 import { routes, display, person, about, blog, work, gallery } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
+import { HyperText } from "./ui/hyper-text";
+import { } from "@once-ui-system/core";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -73,7 +75,7 @@ export const Header = () => {
         }}
       >
         <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Row s={{ hide: true }}>{person.location}</Row>}
+          <Avatar src={person.avatar} size="l"/>
         </Row>
         <Row fillWidth horizontal="center">
           <Row
@@ -185,6 +187,8 @@ export const Header = () => {
             gap="20"
           >
             <Flex s={{ hide: true }}>
+              {"CCU"}
+              {" // "}
               {display.time && <TimeDisplay timeZone={person.location} />}
             </Flex>
           </Flex>
