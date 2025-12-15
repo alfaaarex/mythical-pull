@@ -99,7 +99,7 @@ const dataStyle: DataStyleConfig = {
 
 const effects: EffectsConfig = {
   mask: {
-    cursor: true,
+    cursor: false,
     x: 50,
     y: 0,
     radius: 100,
@@ -122,14 +122,14 @@ const effects: EffectsConfig = {
     color: "brand-background",
   },
   grid: {
-    display: false,
+    display: true,
     opacity: 60,
-    color: "neutral-alpha-medium",
+    color: "neutral-alpha-weak",
     width: "0.25rem",
     height: "0.25rem",
   },
   lines: {
-    display: true,
+    display: false,
     opacity: 100,
     color: "neutral-alpha-weak",
     size: "16",

@@ -88,9 +88,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I build things that are cool and useful. <br></br>
-    COO - The Carcino Foundation,
-    <br></br>Head of Student Developers - Google India.
+    I build things that are cool and useful.
     
 </>
   ),
@@ -99,7 +97,7 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `More About Me`,
+  title: `Learn About Me`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
