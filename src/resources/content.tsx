@@ -103,7 +103,7 @@ const about: About = {
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
-    subItems: true,
+    subItems: false,
   },
   avatar: {
     display: true,
