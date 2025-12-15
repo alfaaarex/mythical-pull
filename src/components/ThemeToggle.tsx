@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Row, ToggleButton, useTheme } from "@once-ui-system/core";
-
+import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 export const ThemeToggle: React.FC = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);

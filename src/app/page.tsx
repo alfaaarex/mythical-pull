@@ -15,7 +15,11 @@ import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import { motion } from "motion/react"
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
+<SmoothCursor />
 export async function generateMetadata() {
   return Meta.generate({
     title: home.title,
@@ -58,7 +62,7 @@ export default function Home() {
                 paddingY="4"
                 onBackground="neutral-strong"
                 textVariant="label-default-s"
-                arrow={false}
+                arrow={true}
                 href={home.featured.href}
               >
                 <Row paddingY="2">{home.featured.title}</Row>
@@ -70,7 +74,7 @@ export default function Home() {
               {home.headline}
             </Heading>
           </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
+          <RevealFx translateY="8" delay={0.1} fillWidth horizontal="center" paddingBottom="32">
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
             </Text>
@@ -81,7 +85,7 @@ export default function Home() {
               data-border="rounded"
               href={about.path}
               variant="secondary"
-              size="m"
+              size="l"
               weight="default"
               arrowIcon
             >
@@ -100,29 +104,10 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
+      <Heading wrap="balance" variant="h2">My Recent Work </Heading>
       <RevealFx translateY="16" delay={0.6}>
-       <Projects range={[0, 0]} />
+       <Projects range={[1,1]} />
       </RevealFx>
-      {routes["/blog"] && (
-        <Column fillWidth gap="24" marginBottom="l">
-          <Row fillWidth paddingRight="64">
-            <Line maxWidth={48} />
-          </Row>
-          <Row fillWidth gap="24" marginTop="40" s={{ direction: "column" }}>
-            <Row flex={1} paddingLeft="l" paddingTop="24">
-              <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                I've been writing lately.
-              </Heading>
-            </Row>
-            <Row flex={3} paddingX="20">
-              <Posts range={[0, 0]} columns="2" />
-            </Row>
-          </Row>
-          <Row fillWidth paddingLeft="64" horizontal="end">
-            <Line maxWidth={48} />
-          </Row>
-        </Column>
-      )}
       <Projects range={[0]} />
     </Column>
   );

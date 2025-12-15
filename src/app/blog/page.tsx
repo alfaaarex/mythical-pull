@@ -2,7 +2,7 @@ import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { baseURL, blog, person } from "@/resources";
-
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 export async function generateMetadata() {
   return Meta.generate({
     title: blog.title,
@@ -12,7 +12,7 @@ export async function generateMetadata() {
     path: blog.path,
   });
 }
-
+<SmoothCursor />
 export default function Blog() {
   return (
     <Column maxWidth="m" paddingTop="24">

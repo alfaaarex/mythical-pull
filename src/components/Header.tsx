@@ -14,7 +14,7 @@ type TimeDisplayProps = {
   locale?: string; // Optionally allow locale, defaulting to 'en-GB'
 };
 
-const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
+const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-US" }) => {
   const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
@@ -24,8 +24,8 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
         timeZone,
         hour: "2-digit",
         minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
+        
+        hour12: true,
       };
       const timeString = new Intl.DateTimeFormat(locale, options).format(now);
       setCurrentTime(timeString);
@@ -77,13 +77,14 @@ export const Header = () => {
         </Row>
         <Row fillWidth horizontal="center">
           <Row
-            background="page"
+            background="surface"
+            backdrop-filter="blur-strong"
             border="neutral-alpha-weak"
             radius="m-4"
             shadow="l"
             padding="4"
             horizontal="center"
-            zIndex={1}
+            zIndex={3}
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (

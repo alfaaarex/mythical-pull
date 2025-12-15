@@ -19,7 +19,7 @@ const baseURL: string = "https://alfarexboi.vercel.app";
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
-  "/work": false,
+  "/work": true,
   "/blog": false,
   "/gallery": false,
 };
@@ -39,25 +39,25 @@ const protectedRoutes: ProtectedRoutesConfig = {
 // Import and set font for each variant
 import { DM_Sans, JetBrains_Mono, Geist } from "next/font/google";
 
-const heading = Geist({
+const heading = JetBrains_Mono({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
 });
 
-const body = Geist({
+const body = JetBrains_Mono({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const label = Geist({
+const label = JetBrains_Mono({
   variable: "--font-label",
   subsets: ["latin"],
   display: "swap",
 });
 
-const code = Geist({
+const code = JetBrains_Mono({
   variable: "--font-code",
   subsets: ["latin"],
   display: "swap",
@@ -72,11 +72,11 @@ const fonts: FontsConfig = {
 
 // default customization applied to the HTML in the main layout.tsx
 const style = {
-  theme: "light",
-  brand: "indigo",
-  accent: "indigo",
-  neutral: "sand",
-  border: "rounded",
+  theme: "dark",
+  brand: "moss",
+  accent: "emerald",
+  neutral: "gray",
+  border: "playful",
   solid: "color",
   solidStyle: "flat",
   surface: "translucent",
@@ -84,7 +84,7 @@ const style = {
 } as StyleConfig;
 
 const dataStyle: DataStyleConfig = {
-  variant: "outline", // flat | gradient | outline
+  variant: "gradient", // flat | gradient | outline
   mode: "categorical", // categorical | divergent | sequential
   height: 24, // default chart height
   axis: {
@@ -105,14 +105,14 @@ const effects: EffectsConfig = {
     radius: 100,
   },
   gradient: {
-    display: false,
+    display: true,
     opacity: 100,
     x: 50,
     y: 60,
     width: 100,
     height: 50,
     tilt: 0,
-    colorStart: "accent-background",
+    colorStart: "accent-background-weak",
     colorEnd: "page-background",
   },
   dots: {
@@ -122,7 +122,7 @@ const effects: EffectsConfig = {
     color: "brand-background",
   },
   grid: {
-    display: false,
+    display: true,
     opacity: 60,
     color: "neutral-alpha-medium",
     width: "0.25rem",

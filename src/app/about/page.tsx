@@ -16,7 +16,7 @@ import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
-
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 export async function generateMetadata() {
   return Meta.generate({
     title: about.title,
@@ -26,7 +26,7 @@ export async function generateMetadata() {
     path: about.path,
   });
 }
-
+<SmoothCursor />
 export default function About() {
   const structure = [
     {
