@@ -13,7 +13,7 @@ interface PostsProps {
 export function Posts({
   range,
   columns = "1",
-  thumbnail = false,
+  thumbnail = true,
   exclude = [],
   direction,
 }: PostsProps) {
@@ -37,7 +37,7 @@ export function Posts({
       {displayedBlogs.length > 0 && (
         <Grid columns={columns} s={{ columns: 1 }} fillWidth marginBottom="40" gap="16">
           {displayedBlogs.map((post) => (
-            <Post key={post.slug} post={post} thumbnail={thumbnail} direction={direction} />
+            <Post key={post.slug} post={post} thumbnail={thumbnail} direction={direction} images={[]} />
           ))}
         </Grid>
       )}

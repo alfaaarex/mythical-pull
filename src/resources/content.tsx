@@ -26,7 +26,7 @@ import { motion } from "motion/react"
 const texts = [
   "Hello!",
   "I'm Agnihotra.",
-  "I'm a UI/UX Designer.",
+  "I'm a UX Designer.",
   "I'm a Developer.",
   "I'm a Researcher.",
 ]
@@ -88,9 +88,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I build things that are cool and useful. <br></br>
-    I'm the COO at The Carcino Foundation,
-    <br></br>and the Head of Student Developers at Google India.
+    I build things that are cool and useful.
     
 </>
   ),
@@ -99,7 +97,7 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `More About Me`,
+  title: `Learn About Me`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,

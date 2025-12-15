@@ -1,44 +1,46 @@
 ---
-title: "Designing Carcino - The Real Story"
+title: "My Take on Liquid Glass"
 publishedAt: "2025-12-14"
-summary: "The ideas behind what makes Carcino's design system unique and effective."
+summary: "Is it fundamentally flawed?"
 images:
-  - "/images/projects/project-01/cover-02.jpg"
-  - "/images/projects/project-01/image-03.jpg"
+  - "/images/projects/project-liquid/liquid.jpeg"
 team:
   - name: "Agnihotra Nath"
-    role: "Chief Operating Officer"
+    role: "UX Designer"
     avatar: "/images/avatar-01.jpg"
     linkedIn: "https://www.linkedin.com/alfarex/"
-link: "https://thecarcinofoundation.org/"
+  - name: "Naitik Chattaraj"
+    role: "Software Developer"
+    avatar: "/images/1764218228562.jpg"
+    linkedIn: "https://www.linkedin.com/in/naitik-chattaraj"
 ---
 
-## Inspiration
+## Initial Opinions
 
-In this project, I focused on creating an automated pipeline that bridges the gap between Figma designs and production-ready code. The goal was to streamline the design-to-development handoff process, reducing manual effort and minimizing discrepancies between design and implementation.
+*Agnihotra's Take*:
 
-## Key Features
+When I saw the announcement of Liquid Glass, I had mixed opinions. On one hand, I was excited about the potential for creating stunning, immersive user interfaces that were otherwise super flat and boring. The idea of incorporating realistic glass-like effects into daily ideas was intriguing and promised to add a layer of sophistication and elegance to designs.
+On the other hand, I was concerned about the practicality of implementing such a design system in real-world applications. Liquid Glass relies heavily on complex visual effects, which could pose significant challenges in terms of performance, especially on lower-end devices or in web applications where resources are limited.
 
-- **Figma Plugin Integration**: Developed a custom Figma plugin that extracts design tokens such as colors, typography, and spacing values, and exports them in a format compatible with our codebase.
-- **Code Generation**: Integrated an automated process that translates Figma components into React code using a combination of design tokens and pre-built component templates. This allowed developers to focus more on logic and less on repetitive UI coding.
-- **Continuous Sync**: Established a CI/CD pipeline that continuously synchronizes design changes from Figma to the codebase, ensuring design updates are reflected instantly without manual intervention.
-- **Scalable Design System**: Leveraged a design system that remains the single source of truth for both designers and developers, making it easy to maintain consistency even as the product evolves.
+*Naitik's Take*:
 
-## Technologies Used
 
-- **Figma API**: For extracting design tokens and component data directly from the Figma designs.
-- **React and Next.js**: For building the front-end codebase with clean, reusable components.
-- **Styled-Components**: For managing styles dynamically using design tokens.
-- **GitHub Actions**: For automating the pipeline and syncing design changes to the repository.
+## Key Points
 
-## Challenges and Learnings
+- Apple's Liquid Glass Design System has been adopted in every piece of software they make, from iOS to macOS.
+- It primarily relies heavily on the GPU, in order to render complex refractions, textures, lighting and more.
+- You can consider it more of a "Lighting Engine" than a "Design System".
+- The complexity of Liquid Glass makes it difficult to implement in web applications, especially when considering performance and responsiveness.
+
+## Design Phase Challenges (By Agnihotra)
+
+*Agnihotra*: 
+> Speaking from personal experience, when I served as the Head of Design at Carcino, I had launched an internal mission to recreate liquid glass in our website and content. It was perfect timing, as Figma had also just launched their Glass Effect feature. However, we quickly realized that while the design looked stunning, implementing it the way it looked in design tools was a massive challenge. 
+> As for me, the designer, I was enjoying every bit of the Glass Effect feature in Figma. I created mesmerising concepts approved by the entire team, except the developers. The developers were quick to point out that implementing such designs would be a nightmare, especially when considering performance and responsiveness. However, they took it up as a challenge to make Liquid Glass possible.
+
+## Development Phase Challenges (By Naitik)
 
 One of the biggest challenges was ensuring that the generated code was clean and maintainable. This involved setting up intelligent mapping between Figma components and React code structures, as well as managing edge cases like responsive design and conditional rendering. Additionally, the continuous synchronization required a robust error-handling system to prevent conflicts during development.
 
 ## Outcome
 
-The automated Figma to code pipeline has streamlined the handoff process, cutting down design-to-development time by 40%. Designers now have more confidence that their designs will be accurately translated into code, and developers can focus on more complex logic and feature development. This project has proven the value of automation in bridging the gap between design and development.
-
----
-
-This project demonstrates your ability to leverage automation and streamline workflows, which is highly relevant for design engineering portfolios focused on efficiency and innovation.

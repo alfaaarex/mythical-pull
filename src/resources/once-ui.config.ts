@@ -19,8 +19,8 @@ const baseURL: string = "https://alfarexboi.vercel.app";
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
-  "/work": true,
-  "/blog": false,
+  "/work": false,
+  "/blog": true,
   "/gallery": false,
 };
 
@@ -72,7 +72,7 @@ const fonts: FontsConfig = {
 
 // default customization applied to the HTML in the main layout.tsx
 const style = {
-  theme: "dark",
+  theme: "system",
   brand: "moss",
   accent: "emerald",
   neutral: "gray",
@@ -99,7 +99,7 @@ const dataStyle: DataStyleConfig = {
 
 const effects: EffectsConfig = {
   mask: {
-    cursor: true,
+    cursor: false,
     x: 50,
     y: 0,
     radius: 100,
@@ -124,7 +124,7 @@ const effects: EffectsConfig = {
   grid: {
     display: true,
     opacity: 60,
-    color: "neutral-alpha-medium",
+    color: "neutral-alpha-weak",
     width: "0.25rem",
     height: "0.25rem",
   },
