@@ -72,7 +72,7 @@ const fonts: FontsConfig = {
 
 // default customization applied to the HTML in the main layout.tsx
 const style = {
-  theme: "dark",
+  theme: "system",
   brand: "moss",
   accent: "emerald",
   neutral: "gray",

@@ -34,7 +34,7 @@ just collecting some error info, and then we'll restart for you.
 ```
 **1. Clone the repository**
 ```
-git clone https://github.com/once-ui-system/magic-portfolio.git
+git clone https://github.com/alfaaarex/mythical-pull
 ```
 
 **2. Install dependencies**
