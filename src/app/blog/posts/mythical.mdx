@@ -1,5 +1,5 @@
 ---
-title: "My Take on Liquid Glass"
+title: "Deconstructing Liquid Glass"
 subtitle: "Delightfully Designed or Fundamentally Flawed?"
 summary: "Apple's new design system, from the eyes of a designer and a developer."
 team:
@@ -19,13 +19,10 @@ images:
 
 ## Initial Opinions
 
-*Agnihotra's Take*:
-
 When I saw the announcement of Liquid Glass, I had mixed opinions. On one hand, I was excited about the potential for creating stunning, immersive user interfaces that were otherwise super flat and boring. The idea of incorporating realistic glass-like effects into daily ideas was intriguing and promised to add a layer of sophistication and elegance to designs.
 On the other hand, I was concerned about the practicality of implementing such a design system in real-world applications. Liquid Glass relies heavily on complex visual effects, which could pose significant challenges in terms of performance, especially on lower-end devices or in web applications where resources are limited.
 
-*Naitik's Take*:
-
+So I decided to ask Naitik, a good friend of mine and a talented frontend developer, to share his thoughts on Liquid Glass from a developer's perspective.
 
 ## Key Points
 
@@ -35,14 +32,21 @@ On the other hand, I was concerned about the practicality of implementing such a
 - The complexity of Liquid Glass makes it difficult to implement in web applications, especially when considering performance and responsiveness.
 
 ## Design Phase Challenges (By Agnihotra)
-
-*Agnihotra*: 
-> Speaking from personal experience, when I served as the Head of Design at Carcino, I had launched an internal mission to recreate liquid glass in our website and content. It was perfect timing, as Figma had also just launched their Glass Effect feature. However, we quickly realized that while the design looked stunning, implementing it the way it looked in design tools was a massive challenge. 
-> As for me, the designer, I was enjoying every bit of the Glass Effect feature in Figma. I created mesmerising concepts approved by the entire team, except the developers. The developers were quick to point out that implementing such designs would be a nightmare, especially when considering performance and responsiveness. However, they took it up as a challenge to make Liquid Glass possible.
+ 
+Speaking from personal experience, when I served as the **Head of Design** at **Carcino**, I had launched an internal mission to recreate liquid glass in our website and content. It was perfect timing, as Figma had also just launched their Glass Effect feature. However, we quickly realized that while the design looked stunning, implementing it the way it looked in design tools was a massive challenge. 
+As for me, the designer, I was enjoying every bit of the **Glass Effect** feature in Figma. I created mesmerising concepts approved by the entire team, except the developers. The developers were quick to point out that implementing such designs would be a nightmare, especially when considering performance and responsiveness. However, they took it up as a challenge to make Liquid Glass possible.
 
 ## Development Phase Challenges (By Naitik)
 
-One of the biggest challenges was ensuring that the generated code was clean and maintainable. This involved setting up intelligent mapping between Figma components and React code structures, as well as managing edge cases like responsive design and conditional rendering. Additionally, the continuous synchronization required a robust error-handling system to prevent conflicts during development.
+Now, liquid glass is something that, even at the time of writing, remains a very niche area of development. My first few days at Carcino as a Frontend Developer were spent just trying to wrap my head around how to implement something that even huge brands like OnePlus couldn’t quite nail—and something that, at Apple, feels like a closely guarded secret recipe. 
+Naturally, I started hunting for resources online, which led to… very little success. The core problem was that liquid glass isn’t something that’s natively supported by any language or framework, so there’s no straightforward “just do this” solution.
+That’s when I decided to come up with my own approach—essentially recreating the glass effect using the minimum possible resources, while keeping it reusable across the website for any component. I broke the problem into two main parts: the inside of the glass and the border.
+Natively, CSS only allows so much. You can apply blur, tweak opacity, and that’s about it. But to achieve the refraction that gives liquid glass its character, I used an invisible SVG with turbulence applied through a displacement map. This SVG exists globally and subtly distorts the background, mimicking the refraction you’d expect from real glass.
+The second challenge was the reflection and shine along the edges. For that, I had to figure out a believable light source which thanks to the figma design I had an idea of already. I used pseudo-elements on the div, leveraging their borders and applying inner white shadows to recreate that subtle edge highlight.
+This introduced yet another problem: pseudo-element borders can’t have gradients—and gradients are crucial for making the shine blend seamlessly with the glass itself. To get around this, I used gradient masking, layering it over the pseudo-element borders so the transition felt natural and inseparable from the parent glass div.
+
+And that’s how I ended up recreating Apple’s  Liquid Glass… _with a box of scraps_  :)
 
 ## Outcome
 
+The implementation of liquid glass in the Carcino website was a success, despite the initial challenges. The team managed to create a visually stunning effect that closely resembled Apple's design system, while also maintaining performance and responsiveness. The reusable components allowed for consistent application across the website, and the final result was a significant improvement in user experience and visual appeal. 
