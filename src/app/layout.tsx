@@ -16,10 +16,7 @@ import {
 import { Footer, Header, RouteGuard, Providers } from "@/components";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
-<><SmoothCursor /><div className="cursor-none">
-  <SmoothCursor />
-  {/* your app */}
-</div></>
+
 export async function generateMetadata() {
   return Meta.generate({
     title: home.title,

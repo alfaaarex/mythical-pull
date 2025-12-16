@@ -15,7 +15,6 @@ const person: Person = {
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bengali", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
-<SmoothCursor />
 import { motion } from "motion/react"
 
 //const newsletter: Newsletter = {

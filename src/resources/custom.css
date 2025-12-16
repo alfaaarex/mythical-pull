@@ -299,3 +299,5 @@ smooth-cursor {
   }
 
 }
+@import "tailwindcss";
+@import "@heroui/styles"; 

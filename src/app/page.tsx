@@ -19,7 +19,6 @@ import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { motion } from "motion/react"
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import Blog from "./blog/page";
-<SmoothCursor />
 export async function generateMetadata() {
   return Meta.generate({
     title: home.title,
@@ -32,6 +31,7 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
+
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
       <Schema
         as="webPage"
@@ -118,4 +118,11 @@ export default function Home() {
       )}
     </Column>
   );
+}
+export function SmoothCursors() {
+  return (
+    <>
+      <SmoothCursor />
+    </>
+  )
 }
