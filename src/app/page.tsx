@@ -108,7 +108,7 @@ export default function Home() {
         <Heading as="h2" variant="display-strong-xs" wrap="balance">
         My Blog Posts</Heading>
          <RevealFx translateY="16" delay={0.6}>
-        <Posts range={[1, 1]} />
+        <Posts range={[1, 5]} />
       </RevealFx>
       
       {routes["/blog"] && (

@@ -34,11 +34,8 @@ export default function Blog() {
       </Heading>
       <Column fillWidth flex={1} gap="40">
         <Posts range-={[1, 1]} thumbnail />
-        <Posts range={[2, 3]} columns="2" thumbnail direction="column" />
-        <Heading as="h2" variant="heading-strong-xl" marginLeft="l">
-          Earlier posts
-        </Heading>
-        <Posts range={[4]} columns="2" />
+        
+          
       </Column>
     </Column>
   );

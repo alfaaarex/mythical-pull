@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { Avatar, Fade, User, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
-
+import { Logo } from "@once-ui-system/core";
 import { routes, display, person, about, blog, work, gallery } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
@@ -75,7 +75,12 @@ export const Header = () => {
         }}
       >
         <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          <Avatar src={person.avatar} size="l"/>
+          <Row light>
+            <Logo icon="/trademarks/light.svg" size="xl"/>
+          </Row>
+          <Row dark>
+            <Logo icon="/trademarks/dark.svg"  size="xl"/>
+          </Row>
         </Row>
         <Row fillWidth horizontal="center">
           <Row

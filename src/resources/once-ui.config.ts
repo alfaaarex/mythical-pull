@@ -37,27 +37,27 @@ const protectedRoutes: ProtectedRoutesConfig = {
 };
 
 // Import and set font for each variant
-import { DM_Sans, JetBrains_Mono, Geist } from "next/font/google";
+import { DM_Sans, Bricolage_Grotesque, Geist } from "next/font/google";
 
-const heading = JetBrains_Mono({
+const heading = Bricolage_Grotesque({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
 });
 
-const body = JetBrains_Mono({
+const body = Bricolage_Grotesque({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const label = JetBrains_Mono({
+const label = Bricolage_Grotesque({
   variable: "--font-label",
   subsets: ["latin"],
   display: "swap",
 });
 
-const code = JetBrains_Mono({
+const code = Bricolage_Grotesque({
   variable: "--font-code",
   subsets: ["latin"],
   display: "swap",
