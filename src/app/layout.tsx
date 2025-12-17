@@ -45,7 +45,6 @@ export default async function RootLayout({
         fonts.code.variable,
       )}
     >
-      <Analytics />
       <head>
         <script
           id="theme-init"
@@ -165,6 +164,7 @@ export default async function RootLayout({
             </Flex>
           </Flex>
           <Footer />
+          <Analytics />
         </Column>
       </Providers>
     </Flex>
