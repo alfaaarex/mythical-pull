@@ -1,7 +1,7 @@
 import "@once-ui-system/core/css/styles.css";
 import "@once-ui-system/core/css/tokens.css";
 import "@/resources/custom.css";
-
+import { Analytics } from '@vercel/analytics/next';
 import classNames from "classnames";
 
 import {
@@ -45,6 +45,7 @@ export default async function RootLayout({
         fonts.code.variable,
       )}
     >
+      <Analytics />
       <head>
         <script
           id="theme-init"
