@@ -16,6 +16,7 @@ const person: Person = {
   languages: ["English", "Bengali", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 import { motion } from "motion/react"
+import { AuroraText } from "@/components/ui/aurora-text";
 
 //const newsletter: Newsletter = {
 //  display: false,
@@ -71,7 +72,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}`,
   description: `${person.role} based in Kolkata, India.`,
-  headline: <TypingAnimation words={texts} loop />,
+  headline: <AuroraText>Hi! I'm Agnihotra</AuroraText>,
   featured: {
     display: true,
     title: (

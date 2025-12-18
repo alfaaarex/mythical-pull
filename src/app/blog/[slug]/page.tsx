@@ -24,14 +24,13 @@ import { Metadata } from "next";
 import React from "react";
 import { Posts } from "@/components/blog/Posts";
 import { ShareSection } from "@/components/blog/ShareSection";
-
+import { AuroraText } from "@/components/ui/aurora-text";
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "blog", "posts"]);
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
-
 export async function generateMetadata({
   params,
 }: {
@@ -53,6 +52,7 @@ export async function generateMetadata({
     baseURL: baseURL,
     image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
     path: `${blog.path}/${post.slug}`,
+
   });
 }
 
@@ -103,7 +103,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
             <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
               {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
             </Text>
-            <Heading variant="display-strong-m">{post.metadata.title}</Heading>
+            <Heading variant="display-strong-m"><AuroraText>{post.metadata.title}</AuroraText></Heading>
             {post.metadata.subtitle && (
               <Text 
                 variant="body-default-l" 
