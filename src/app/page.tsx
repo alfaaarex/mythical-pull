@@ -19,7 +19,6 @@ import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { motion } from "motion/react"
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import Blog from "./blog/page";
-import { RainbowButton } from "@/components/ui/rainbow-button";
 export async function generateMetadata() {
   return Meta.generate({
     title: home.title,
@@ -66,7 +65,7 @@ export default function Home() {
                 arrow={false}
                 href={home.featured.href}
               >
-                <Row paddingY="2"><RainbowButton>{home.featured.title}</RainbowButton></Row>
+                <Row paddingY="2">{home.featured.title}</Row>
               </Badge>
             </RevealFx>
           )}
